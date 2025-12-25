@@ -11,6 +11,8 @@ import DummyWorkTimeChart from './components/DummyWorkTimeChart';
 import DummyTeamChart from './components/DummyTeamChart';
 import TeamList from './components/TeamList';
 import ProjectList from './components/ProjectList';
+import CalendarView from './components/CalendarView';
+import DocumentList from './components/DocumentList';
 
 function App() {
   const [activeTab, setActiveTab] = useState('Dashboard');
