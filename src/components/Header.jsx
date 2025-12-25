@@ -1,24 +1,23 @@
 import React from 'react';
 import { Search, Mail, Bell, LayoutGrid, ChevronLeft, ChevronRight, Download, Plus } from 'lucide-react';
 
-
 const Header = () => {
     return (
-        <header className="flex items-center justify-between px-8 py-6 bg-white">
-            <div className="flex items-center gap-8">
+        <header className="flex flex-col lg:flex-row items-center justify-between px-4 lg:px-8 py-4 lg:py-6 bg-white gap-4 lg:gap-0">
+            <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-8 w-full lg:w-auto">
                 {/* Logo */}
-                <div className="w-10 h-10 bg-[#B4EFB6] rounded-xl flex items-center justify-center text-green-800">
+                <div className="w-10 h-10 bg-[#B4EFB6] rounded-xl flex items-center justify-center text-green-800 shrink-0">
                     <LayoutGrid size={24} />
                 </div>
 
                 {/* Navigation Pills */}
-                <nav className="flex items-center bg-[#F4F5F7] p-1 rounded-full">
+                <nav className="flex items-center bg-[#F4F5F7] p-1 rounded-full overflow-x-auto max-w-full">
                     {['Dashboard', 'Calendar', 'Projects', 'Team', 'Documents'].map((item, index) => (
                         <button
                             key={item}
-                            className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${index === 0
-                                ? 'bg-[#B4EFB6] text-green-900 shadow-sm'
-                                : 'text-gray-500 hover:text-gray-700'
+                            className={`px-4 lg:px-6 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${index === 0
+                                    ? 'bg-[#B4EFB6] text-green-900 shadow-sm'
+                                    : 'text-gray-500 hover:text-gray-700'
                                 }`}
                         >
                             {item}
@@ -28,10 +27,10 @@ const Header = () => {
             </div>
 
             {/* Right Actions */}
-            <div className="flex items-center gap-6">
-                <div className="flex items-center gap-2 text-gray-400 bg-gray-50 px-4 py-2 rounded-full">
+            <div className="flex items-center gap-6 w-full lg:w-auto justify-end">
+                <div className="flex items-center gap-2 text-gray-400 bg-gray-50 px-4 py-2 rounded-full flex-1 lg:flex-none">
                     <Search size={18} />
-                    <input type="text" placeholder="Search..." className="bg-transparent border-none outline-none text-sm w-32" />
+                    <input type="text" placeholder="Search..." className="bg-transparent border-none outline-none text-sm w-full lg:w-32" />
                 </div>
                 <button className="p-2 text-gray-400 hover:text-gray-600">
                     <Mail size={20} />

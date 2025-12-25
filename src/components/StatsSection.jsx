@@ -3,7 +3,7 @@ import { ArrowUp, Hourglass, Globe, Users } from 'lucide-react';
 
 const StatsSection = () => {
     return (
-        <div className="flex gap-6 h-[260px]">
+        <div className="flex flex-col md:flex-row gap-6 h-auto lg:h-[260px]">
             {/* Large Stats Card (Hours) */}
             <div className="flex-1 bg-gray-50 rounded-3xl p-6 relative">
                 <div className="flex justify-between items-start mb-4">
@@ -18,13 +18,13 @@ const StatsSection = () => {
                 <p className="text-gray-400 text-xs mb-6">avg hours / weeks</p>
 
                 {/* Dot chart visualization simulation */}
-                <div className="flex items-end justify-between h-24 gap-1">
+                <div className="flex items-end justify-between h-24 gap-1 overflow-hidden">
                     {[3, 4, 3, 5, 6, 2, 4, 3, 5, 4, 6, 3, 4, 5, 4, 3].map((val, i) => (
                         <div key={i} className="flex flex-col gap-1">
                             {[...Array(6)].map((_, j) => (
                                 <div
                                     key={j}
-                                    className={`w-2 h-2 rounded-full ${6 - j <= val ? 'bg-teal-700' : 'bg-gray-200'}`}
+                                    className={`w-1.5 md:w-2 h-1.5 md:h-2 rounded-full ${6 - j <= val ? 'bg-teal-700' : 'bg-gray-200'}`}
                                 ></div>
                             ))}
                         </div>
@@ -42,10 +42,10 @@ const StatsSection = () => {
             </div>
 
             {/* Right Column Stats */}
-            <div className="w-1/3 flex flex-col gap-4">
+            <div className="w-full md:w-1/3 flex flex-col gap-4">
 
                 {/* Onsite Card */}
-                <div className="bg-[#527CA6] text-white rounded-3xl p-5 flex-1 flex flex-col justify-between">
+                <div className="bg-[#527CA6] text-white rounded-3xl p-5 flex-1 flex flex-col justify-between min-h-[120px]">
                     <div className="flex justify-between items-start">
                         <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
                             <Users size={16} />
@@ -62,7 +62,7 @@ const StatsSection = () => {
                 </div>
 
                 {/* Remote Card */}
-                <div className="bg-white border border-gray-100 rounded-3xl p-5 flex-1 flex flex-col justify-between shadow-sm">
+                <div className="bg-white border border-gray-100 rounded-3xl p-5 flex-1 flex flex-col justify-between shadow-sm min-h-[120px]">
                     <div className="flex justify-between items-start">
                         <div className="w-8 h-8 bg-[#E0F2F1] text-teal-700 rounded-full flex items-center justify-center">
                             <Globe size={16} />
