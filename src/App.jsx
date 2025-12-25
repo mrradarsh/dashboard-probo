@@ -2,9 +2,9 @@ import React from 'react';
 import Header from './components/Header';
 import { Plus, Calendar, FileText } from 'lucide-react';
 import ProfileCard from './components/ProfileCard';
-import WorkTimeChart from './components/WorkTimeChart';
+// import WorkTimeChart from './components/WorkTimeChart';
 import StatsSection from './components/StatsSection';
-import TeamChart from './components/TeamChart';
+// import TeamChart from './components/TeamChart';
 import RecruitmentCard from './components/RecruitmentCard';
 import SalaryList from './components/SalaryList';
 import PaymentCard from './components/PaymentCard';
@@ -48,8 +48,9 @@ function App() {
               {/* Placeholder for ProfileCard */}
               <ProfileCard />
             </div>
-            <div className="bg-gray-50 rounded-3xl p-6 h-[220px]">
-              <WorkTimeChart />
+            <div className="bg-gray-50 rounded-3xl p-6 h-[220px] flex items-center justify-center text-gray-400">
+              {/* <WorkTimeChart /> */}
+              <div>Chart Loading...</div>
             </div>
           </div>
 
@@ -58,8 +59,9 @@ function App() {
             <StatsSection />
 
             <div className="grid grid-cols-2 gap-6 h-[300px]">
-              <div className="bg-gray-50 rounded-3xl p-6">
-                <TeamChart />
+              <div className="bg-gray-50 rounded-3xl p-6 flex items-center justify-center text-gray-400">
+                {/* <TeamChart /> */}
+                <div>Chart Loading...</div>
               </div>
               <div className="bg-gray-50 rounded-3xl p-6">
                 <RecruitmentCard />
