@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import { Plus, Calendar, FileText } from 'lucide-react';
 import ProfileCard from './components/ProfileCard';
+import Button from './components/Button';
 // import WorkTimeChart from './components/WorkTimeChart';
 import StatsSection from './components/StatsSection';
 // import TeamChart from './components/TeamChart';
@@ -22,20 +23,20 @@ function App() {
               Portal <span className="mx-2">›</span> Dashboard
             </div>
             <h1 className="text-3xl lg:text-4xl font-semibold tracking-tight">
-              Good morning Jhon
+              Good morning Adarsh
             </h1>
           </div>
 
           <div className="flex flex-wrap items-center gap-3 w-full lg:w-auto">
-            <button className="flex-1 lg:flex-none flex items-center justify-center gap-2 px-5 py-2.5 bg-white border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 shadow-sm whitespace-nowrap">
-              <Plus size={16} /> Add widget
-            </button>
-            <button className="flex-1 lg:flex-none flex items-center justify-center gap-2 px-5 py-2.5 bg-white border border-gray-200 rounded-full text-sm font-medium hover:bg-gray-50 shadow-sm whitespace-nowrap">
-              <Calendar size={16} /> 18-22 Nov
-            </button>
-            <button className="flex-1 lg:flex-none flex items-center justify-center gap-2 px-5 py-2.5 bg-[#B4EFB6] text-green-900 rounded-full text-sm font-medium hover:opacity-90 shadow-sm whitespace-nowrap">
-              <FileText size={16} /> Add report
-            </button>
+            <Button icon={Plus} className="flex-1 lg:flex-none">
+              Add widget
+            </Button>
+            <Button icon={Calendar} className="flex-1 lg:flex-none">
+              18-22 Nov
+            </Button>
+            <Button variant="primary" icon={FileText} className="flex-1 lg:flex-none">
+              Add report
+            </Button>
           </div>
         </div>
 
