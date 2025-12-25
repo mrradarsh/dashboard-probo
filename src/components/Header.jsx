@@ -12,7 +12,7 @@ const Header = ({ activeTab, onTabChange }) => {
                 </div>
 
                 {/* Navigation Pills */}
-                <nav className="flex items-center bg-[#F4F5F7] p-1 rounded-full overflow-x-auto max-w-full">
+                <nav className="flex items-center bg-[#F4F5F7] p-1 rounded-full overflow-x-auto max-w-full no-scrollbar">
                     {['Dashboard', 'Calendar', 'Projects', 'Team', 'Documents'].map((item) => (
                         <Button
                             key={item}
