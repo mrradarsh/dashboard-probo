@@ -1,8 +1,8 @@
 import React from 'react';
-import { Search, Mail, Bell, LayoutGrid, ChevronLeft, ChevronRight, Download, Plus } from 'lucide-react';
+import { Search, Mail, Bell, LayoutGrid } from 'lucide-react';
 import Button from './Button';
 
-const Header = () => {
+const Header = ({ activeTab, onTabChange }) => {
     return (
         <header className="flex flex-col lg:flex-row items-center justify-between px-4 lg:px-8 py-4 lg:py-6 bg-white gap-4 lg:gap-0">
             <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-8 w-full lg:w-auto">
@@ -13,10 +13,11 @@ const Header = () => {
 
                 {/* Navigation Pills */}
                 <nav className="flex items-center bg-[#F4F5F7] p-1 rounded-full overflow-x-auto max-w-full">
-                    {['Dashboard', 'Calendar', 'Projects', 'Team', 'Documents'].map((item, index) => (
+                    {['Dashboard', 'Calendar', 'Projects', 'Team', 'Documents'].map((item) => (
                         <Button
                             key={item}
-                            variant={index === 0 ? 'active' : 'ghost'}
+                            variant={activeTab === item ? 'active' : 'ghost'}
+                            onClick={() => onTabChange(item)}
                             className="rounded-full !py-2 !px-4 lg:!px-6 border-none"
                         >
                             {item}
