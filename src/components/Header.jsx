@@ -1,5 +1,6 @@
 import React from 'react';
 import { Search, Mail, Bell, LayoutGrid, ChevronLeft, ChevronRight, Download, Plus } from 'lucide-react';
+import Button from './Button';
 
 const Header = () => {
     return (
@@ -13,15 +14,13 @@ const Header = () => {
                 {/* Navigation Pills */}
                 <nav className="flex items-center bg-[#F4F5F7] p-1 rounded-full overflow-x-auto max-w-full">
                     {['Dashboard', 'Calendar', 'Projects', 'Team', 'Documents'].map((item, index) => (
-                        <button
+                        <Button
                             key={item}
-                            className={`px-4 lg:px-6 py-2 rounded-full text-sm font-medium transition-all whitespace-nowrap ${index === 0
-                                    ? 'bg-[#B4EFB6] text-green-900 shadow-sm'
-                                    : 'text-gray-500 hover:text-gray-700'
-                                }`}
+                            variant={index === 0 ? 'active' : 'ghost'}
+                            className="rounded-full !py-2 !px-4 lg:!px-6 border-none"
                         >
                             {item}
-                        </button>
+                        </Button>
                     ))}
                 </nav>
             </div>
