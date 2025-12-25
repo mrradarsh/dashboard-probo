@@ -7,8 +7,8 @@ const Header = ({ activeTab, onTabChange }) => {
         <header className="flex flex-col lg:flex-row items-center justify-between px-4 lg:px-8 py-4 lg:py-6 bg-white gap-4 lg:gap-0">
             <div className="flex flex-col md:flex-row items-center gap-4 lg:gap-8 w-full lg:w-auto">
                 {/* Logo */}
-                <div className="w-10 h-10 bg-[#B4EFB6] rounded-xl flex items-center justify-center text-green-800 shrink-0">
-                    <LayoutGrid size={24} />
+                <div className="w-10 h-10 bg-[#B4EFB6] rounded-xl flex items-center justify-center text-green-800 shrink-0 font-bold text-xl">
+                    V
                 </div>
 
                 {/* Navigation Pills */}
