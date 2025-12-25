@@ -106,6 +106,26 @@ function App() {
             <ProjectList />
           </div>
         );
+      case 'Calendar':
+        return (
+          <div className="animate-in fade-in duration-500">
+            <div className="mb-8">
+              <h1 className="text-3xl font-semibold tracking-tight mb-2">Calendar</h1>
+              <p className="text-gray-500">Schedule and upcoming events.</p>
+            </div>
+            <CalendarView />
+          </div>
+        );
+      case 'Documents':
+        return (
+          <div className="animate-in fade-in duration-500">
+            <div className="mb-8">
+              <h1 className="text-3xl font-semibold tracking-tight mb-2">Documents</h1>
+              <p className="text-gray-500">Access and manage project files.</p>
+            </div>
+            <DocumentList />
+          </div>
+        );
       default:
         // Placeholder for other tabs
         return (
