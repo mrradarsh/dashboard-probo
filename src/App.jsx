@@ -9,6 +9,8 @@ import SalaryList from './components/SalaryList';
 import PaymentCard from './components/PaymentCard';
 import DummyWorkTimeChart from './components/DummyWorkTimeChart';
 import DummyTeamChart from './components/DummyTeamChart';
+import TeamList from './components/TeamList';
+import ProjectList from './components/ProjectList';
 
 function App() {
   const [activeTab, setActiveTab] = useState('Dashboard');
@@ -81,6 +83,26 @@ function App() {
 
             </div>
           </>
+        );
+      case 'Team':
+        return (
+          <div className="animate-in fade-in duration-500">
+            <div className="mb-8">
+              <h1 className="text-3xl font-semibold tracking-tight mb-2">My Team</h1>
+              <p className="text-gray-500">Manage your team members and roles.</p>
+            </div>
+            <TeamList />
+          </div>
+        );
+      case 'Projects':
+        return (
+          <div className="animate-in fade-in duration-500">
+            <div className="mb-8">
+              <h1 className="text-3xl font-semibold tracking-tight mb-2">Projects</h1>
+              <p className="text-gray-500">Track current progress and deadlines.</p>
+            </div>
+            <ProjectList />
+          </div>
         );
       default:
         // Placeholder for other tabs
