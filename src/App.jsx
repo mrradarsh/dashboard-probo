@@ -13,6 +13,8 @@ import TeamList from './components/TeamList';
 import ProjectList from './components/ProjectList';
 import CalendarView from './components/CalendarView';
 import DocumentList from './components/DocumentList';
+import Statistics from './components/Statistics';
+import Portfolio from './components/Portfolio';
 
 function App() {
   const [activeTab, setActiveTab] = useState('Dashboard');
@@ -86,6 +88,10 @@ function App() {
             </div>
           </>
         );
+      case 'Statistics':
+        return <Statistics />;
+      case 'Portfolio':
+        return <Portfolio />;
       case 'Team':
         return (
           <div className="animate-in fade-in duration-500">

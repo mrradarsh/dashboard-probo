@@ -55,12 +55,12 @@ const Header = ({ activeTab, onTabChange }) => {
 
                     {/* Navigation Pills */}
                     <nav className="flex items-center bg-[#F4F5F7] p-1 rounded-full overflow-x-auto max-w-full no-scrollbar">
-                        {['Dashboard', 'Calendar', 'Projects', 'Team', 'Documents'].map((item) => (
+                        {['Dashboard', 'Statistics', 'Portfolio', 'Calendar', 'Projects', 'Team', 'Documents'].map((item) => (
                             <Button
                                 key={item}
                                 variant={activeTab === item ? 'active' : 'ghost'}
                                 onClick={() => onTabChange(item)}
-                                className="rounded-full !py-2 !px-4 lg:!px-6 border-none"
+                                className="rounded-full !py-2 !px-4 lg:!px-6 border-none whitespace-nowrap"
                             >
                                 {item}
                             </Button>

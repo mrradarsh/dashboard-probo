@@ -23,8 +23,8 @@ const ProfileCard = () => {
 
                 <div className="flex items-end justify-between">
                     <div>
-                        <h3 className="text-xl font-semibold">Chris Jonathan</h3>
-                        <p className="text-gray-200 text-sm">General manager</p>
+                        <h3 className="text-xl font-semibold">Adarsh Dubey</h3>
+                        <p className="text-gray-200 text-sm">CEO, Founder</p>
                     </div>
 
                     <div className="flex gap-2">
